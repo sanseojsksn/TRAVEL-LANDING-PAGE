@@ -1,0 +1,532 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f4f4;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+width:95%;
+height:850px;
+margin:20px auto;
+border-radius:40px;
+overflow:hidden;
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+z-index:-2;
+}
+
+.hero-bg img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:blur(3px);
+transform:scale(1.05);
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(80,20,80,.35);
+z-index:-1;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px 60px;
+}
+
+.logo h2{
+color:#ffb4ff;
+font-size:30px;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#fff;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#d1008f;
+}
+
+.menu-btn{
+display:none;
+font-size:28px;
+color:#fff;
+cursor:pointer;
+}
+
+.hero-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 60px;
+}
+
+.hero-left{
+max-width:500px;
+}
+
+.hero-left h1{
+font-size:70px;
+line-height:1.05;
+color:#fff;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero-left p{
+color:#fff;
+margin-bottom:30px;
+font-size:16px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:15px 40px;
+border:2px solid white;
+border-radius:15px;
+text-decoration:none;
+color:#fff;
+transition:.3s;
+}
+
+.hero-btn:hover{
+background:white;
+color:#7d007d;
+}
+
+.hero-right{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.floating-card{
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,.3);
+transition:.4s;
+}
+
+.floating-card:hover{
+transform:translateY(-10px);
+}
+
+.floating-card img{
+display:block;
+object-fit:cover;
+}
+
+.card1 img{
+width:230px;
+height:330px;
+}
+
+.card2 img{
+width:180px;
+height:220px;
+}
+
+.card3 img{
+width:150px;
+height:220px;
+}
+
+/* HOT DEALS */
+
+.hot-deals{
+background:white;
+width:85%;
+margin:-80px auto 80px;
+padding:50px;
+border-radius:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.section-title h2{
+font-size:45px;
+color:#9b008f;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#777;
+}
+
+.deals-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.deal-card{
+position:relative;
+height:300px;
+overflow:hidden;
+border-radius:25px;
+cursor:pointer;
+}
+
+.deal-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.deal-card:hover img{
+transform:scale(1.1);
+}
+
+.deal-overlay{
+position:absolute;
+inset:0;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+background:linear-gradient(
+to top,
+rgba(140,0,120,.9),
+rgba(140,0,120,.2)
+);
+color:white;
+}
+
+.deal-overlay h3{
+margin-bottom:15px;
+}
+
+.deal-overlay ul{
+list-style:none;
+margin-bottom:20px;
+}
+
+.deal-overlay button{
+border:none;
+padding:12px;
+border-radius:12px;
+background:white;
+color:#9b008f;
+font-weight:600;
+cursor:pointer;
+}
+
+/* DESTINATION */
+
+.destination{
+width:85%;
+margin:auto;
+padding-bottom:80px;
+}
+
+.destination-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+grid-auto-rows:250px;
+gap:20px;
+}
+
+.destination-card{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+}
+
+.destination-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.destination-card:hover img{
+transform:scale(1.08);
+}
+
+.destination-card .overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(
+to top,
+rgba(155,0,143,.9),
+transparent
+);
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:20px;
+color:white;
+}
+
+.big{
+grid-row:span 2;
+}
+
+.tall{
+grid-row:span 2;
+}
+
+/* RESPONSIBILITY */
+
+.responsibility{
+position:relative;
+width:85%;
+height:420px;
+margin:auto;
+border-radius:30px;
+overflow:hidden;
+}
+
+.responsibility-bg{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.responsibility-content{
+position:relative;
+z-index:2;
+padding:60px;
+text-align:center;
+}
+
+.responsibility-content h2{
+font-size:45px;
+color:white;
+margin-bottom:50px;
+}
+
+.responsibility-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.glass-card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.3);
+padding:35px;
+border-radius:25px;
+color:white;
+}
+
+.icon{
+width:60px;
+height:60px;
+background:#c000a0;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto auto 20px;
+font-size:22px;
+}
+
+/* FOOTER */
+
+footer{
+background:white;
+margin-top:80px;
+padding-top:60px;
+}
+
+.footer-container{
+width:85%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.footer-col h2{
+color:#a30093;
+margin-bottom:20px;
+}
+
+.footer-col h3{
+margin-bottom:20px;
+}
+
+.footer-col p{
+color:#666;
+margin-bottom:15px;
+}
+
+.footer-col a{
+display:block;
+text-decoration:none;
+color:#666;
+margin-bottom:12px;
+}
+
+.social{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.social i{
+font-size:22px;
+color:#a30093;
+cursor:pointer;
+}
+
+.footer-col input{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:12px;
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.footer-btn{
+padding:12px 25px;
+background:#a30093;
+border:none;
+border-radius:12px;
+color:white;
+cursor:pointer;
+}
+
+.copyright{
+text-align:center;
+padding:25px;
+margin-top:40px;
+border-top:1px solid #ddd;
+color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.hero-content{
+flex-direction:column;
+gap:40px;
+}
+
+.deals-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.destination-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.responsibility-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-container{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero-left h1{
+font-size:48px;
+}
+
+.hero-right{
+flex-direction:column;
+}
+
+.deals-grid{
+grid-template-columns:1fr;
+}
+
+.destination-grid{
+grid-template-columns:1fr;
+}
+
+.responsibility{
+height:auto;
+}
+
+.responsibility-grid{
+grid-template-columns:1fr;
+}
+
+.section-title h2{
+font-size:35px;
+}
+}
+/* pehle wala pura CSS */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+/* baaki responsive css */
+}
+
+/* YAHAN PASTE KARO */
+
+@media(max-width:768px){
+
+.nav-links.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:90px;
+left:20px;
+right:20px;
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.nav-links.active a{
+color:#333;
+}
+}
